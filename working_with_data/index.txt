@@ -1,0 +1,102 @@
+Let's recall what we have learnt as of now
+
+    => core function of sql
+
+    FLASK ARCHITECTURE
+    ????????????????????????????????
+    => repo provide data access method
+    => service layer handle businness logic and validation
+    => controller handles http request
+    => database layer
+
+
+Flask development with SQL
+
+=> API === "a way for programs to communicate over the internet through a protocol (HTTP)"
+
+Steps:
+    - The client generate a REQUEST (http object)
+    - The request is sent over the internet, if you are on the browser, fetch
+    - Fetch api sends the request to a server
+    - The server will process the request
+    - The server generate a HTTP response (JSON object)
+
+
+HTTP STATUS CODES
+    - 200 OK  => GET request, Everything is alright
+    - 201 Created => POST request, New thing was successfully made into existence
+    - 204 No content => DELETE request, worked and nothing was returned
+
+    - 300's redirection
+
+    - 400 Bad Request, missing data
+    - 402 Payment required
+    - 404 Not Found, the thing doesn't existence
+    - 405 method not allowed, the HTTP Verb is wrong for that route
+    - 409 conflict
+
+    -500's server errored
+
+SEQUEL Fundamentals
+    => SQL = structured query language
+    => used to communicate with the database
+
+What is a database?
+=> A file with COLLECTIONS OF TABLES and how they related 
+
+What is a table?
+=> A collection of related data in a structured format, (collection of attributes and tuple)
+
+What is a row?
+=> Tuples
+
+What is a column?
+=> attributes
+
+
+SQL is used to communicate with the database and perform some operations
+ => Insert data
+ => Update data
+ => Retrive data
+ => Delete data
+
+SQL is divided into 5 sub-languages
+1. DDL
+=> Define the table structure
+=> Commands used are either (CREATE, ALTER, DROP, TRUNCATE)
+
+2. DML
+=> deal with the data inside the table
+=> Commands used are either (INSERT, UPDATE, DELETE)
+
+3. DQL
+=> Retrive data
+=> Commands used is (SELECT)
+
+4. TCL
+=> Manage the execution process
+=> Commands used are either (COMMIT, ROLLBACK)
+
+5. DCL
+=> Use to control the users permission
+=> Commands used are either(GRANT, REVOKE)
+
+
+////////////////////////////////////////////////////////////
+GET /api/books/1
+
+{
+  "ok": true,
+  "status": 200,
+  "message": "Book found",
+  "data": {
+    "book": {
+      "id": 1,
+      "title": "Hitchhiker's Guide",
+      "author": "Douglas Adams",
+      "genre": "Sci-Fi",
+      "year": 1979,
+      "available": 1
+    }
+  }
+}
